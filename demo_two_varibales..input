@@ -1,0 +1,21 @@
+# Set of observed values to fit with the levenberg-marquardt algorithm
+#Created by Luis Salas Guerrero
+#
+#Sat Nov 27 2021
+#
+#This is a template
+#
+x-set-size 3
+init-param 0.8 3.5 4
+derivative-step 0.00003
+damping-factor 2
+max-steps 20
+tolerance 0.001
+use-cores 4
+save-jacobian
+save-xy
+save-mse
+save-log
+#
+#From here you can type the datasets with x1 x2 ... xn y <other info>
+#

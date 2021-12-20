@@ -1,0 +1,31 @@
+SimulationType			Montecarlo
+NumberOfCycles			5000
+NumberOfInitializationCycles	1000
+PrintEvery			200
+
+ContinueAfterCrash		no
+WriteBinaryRestartFileEvery	200
+
+Movies				no
+WriteMoviesEvery		20000
+
+Cutoff				9.0
+Forcefield			CurrentFolder
+
+Framework			0
+FrameworkName			GRAP
+UnitCells			1 1 1
+HeliumVoidFraction		1.00
+ExternalTemperature		&0
+ExternalPressure		&1
+InputFileType			cssr
+
+Component 0	MoleculeName		N2
+		MoleculeDefinition	CurrentFolder
+		TranslationProbability	0.10
+		ReinsertionProbability	0.15
+		CBMCProbability		0.05
+		RotationProbability	0.20
+		SwapProbability		0.50
+		CreateNumberOfMolecules	0
+
