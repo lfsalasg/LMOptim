@@ -26,6 +26,7 @@ def initialize():
 
     jobName     = 'Optimization'
     delta       = 0.00002
+    lamb        = 1
     maxSteps    = 20 
     tolerance   = 0.01
     cores       = 1
