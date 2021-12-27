@@ -1,0 +1,8 @@
+# of rules to overwrite
+0
+# of defined interactions
+1
+# type     type2     interaction
+C          H_L       lennard-jones    {0}    {1}
+# of mixing rules to overwrite
+0

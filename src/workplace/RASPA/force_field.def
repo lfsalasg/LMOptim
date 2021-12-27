@@ -1,9 +1,0 @@
-# of rules to overwrite
-0
-# of defined interactions
-0
-# type	type2	interaction
-#C	H	lennard-jones	32.493	3.179
-#H	H	lennard-jones	36.670	2.958 
-# of mixing rules to overwrite
-0
