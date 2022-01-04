@@ -63,13 +63,11 @@ def launch_step(sname,step,param,states,cores):
             copy_tree(tmp_dir+name+'/step_files',tmp_dir+name+'/point_'+str(i))
             set_state(tmp_dir+name+'/point_'+str(i)+'/simulation.input',states[i])
             
-            shuttle.write('cd '+tmp_dir+name+'/point_'+str(i)+'&& taskset --cpu-list '+str(core)+' ./run & cd '+tmp_dir+'\n')
+            shuttle.write('cd '+tmp_dir+name+'/point_'+str(i)+'&& srun --partition=longjobs --nodes=1 --ntasks=1 --time=00:08:00 ./run & cd '+tmp_dir+'\n')
 
-            #commands.append('cd '+tmp_dir+name+'/point_'+str(i)+'&& taskset --cpu-list '+str(core)+' ./run ')
-            
-            #commands.append('cd '+tmp_dir+name+'/point_'+str(i)+'&& ./run && cd ../../../')
-    
+            #commands.append('cd '+tmp_dir+name+'/point_'+str(i)+'&& srun --partition=longjobs --nodes=1 --ntasks=3 --time=00:01:00 ./run & cd '+tmp_dir)    
             i+=1
+
         shuttle.write('wait')
         shuttle.close()
         proc = subprocess.Popen('cd '+tmp_dir+' && bash shuttle.sh',shell=True)
