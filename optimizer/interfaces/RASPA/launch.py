@@ -9,7 +9,7 @@ from pathlib import Path
 import optimizer.settings as st
 
 def set_param(fdir,param):
-    fin = open(fdir,'r')
+    fin = open(fdir,'r')srun inside python
     data = fin.read()
     fin.close()
     i=0

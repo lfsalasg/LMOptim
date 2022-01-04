@@ -15,8 +15,8 @@ cell-angles:    90.000000000000    90.000000000000    90.000000000000
 
 Maximum changes for MC-moves:
 ========================================================================
-Maximum-volume-change: 0.000500
-Maximum-Gibbs-volume-change: 0.000781
+Maximum-volume-change: 0.012500
+Maximum-Gibbs-volume-change: 0.050000
 Maximum-box-shape-change: 0.100000 0.100000 0.100000, 0.100000 0.100000 0.100000, 0.100000 0.100000 0.100000
 
 
@@ -37,9 +37,9 @@ Component 0 (H2)
 	Maximum-CF-Lambda-change component 0: 0.500000
 	Maximum-CBCF-Lambda-change component 0: 0.500000
 
-	Maximum-translation-change component 0: 1.000000,1.000000,1.000000
+	Maximum-translation-change component 0: 0.650000,0.650000,0.650000
 	Maximum-translation-in-plane-change component 0: 0.000000,0.000000,0.000000
-	Maximum-rotation-change component 0: 0.828350 0.828350 0.828350
+	Maximum-rotation-change component 0: 0.218166 0.218166 0.218166
 
 Reactions: 0
 

@@ -3,6 +3,6 @@
 # of defined interactions
 1
 # type     type2     interaction
-C          H_L       lennard-jones    33.004150770687545    4.0067701721533675
+C          H_L       lennard-jones    33.00491931739479    3.995871424139052
 # of mixing rules to overwrite
 0
