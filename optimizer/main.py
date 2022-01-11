@@ -75,11 +75,11 @@ def main(inf):
             except ValueError as e:
                 print("Fatal error: ",e)
 
-    log = ut.Logger("example.log",True)
+    log = ut.Logger("try3.log",True)
     if st.save["jacobian"]:
-        logJ = ut.Logger("example_J.log",True)
+        logJ = ut.Logger("try3_J.log",True)
     if st.save["fx"]:
-        logF = ut.Logger("example_F.log",True)
+        logF = ut.Logger("try3_F.log",True)
 
     #Initialize the fx vector
     fx = mat (np.zeros ((len(states), 1))) # f (x) 100 * 1 error
@@ -136,4 +136,3 @@ def main(inf):
 
     duration = datetime.today()-start_time
     print("Optimization took %d miliseconds" %(duration.microseconds / 1000))
-

@@ -131,3 +131,6 @@ dmypy.json
 
 # Other files and directories
 optimizer/tmp/*
+*.input
+!template.input
+*.out

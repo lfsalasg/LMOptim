@@ -9,7 +9,7 @@ from pathlib import Path
 import optimizer.settings as st
 
 def set_param(fdir,param):
-    fin = open(fdir,'r')srun inside python
+    fin = open(fdir,'r')
     data = fin.read()
     fin.close()
     i=0
@@ -83,7 +83,7 @@ def read_results(sname,step,points,observable):
         #print(path)
         for filename in glob.glob(path):
             txt = Path(filename).read_text()
-            line = re.findall("Average loading excess \[cm\^3 \(STP\)\/gr(?:(?!<\/?p).)*",txt)
+            line = re.findall("Average loading absolute \[cm\^3 \(STP\)\/gr(?:(?!<\/?p).)*",txt)
             results[i] = line[0].split()[6]
             break
     

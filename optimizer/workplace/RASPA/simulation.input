@@ -1,10 +1,10 @@
 SimulationType			Montecarlo
-NumberOfCycles			75000
-NumberOfInitializationCycles	20000
+NumberOfCycles			200000
+NumberOfInitializationCycles	50000
 PrintEvery			2000
 
 ContinueAfterCrash		no
-WriteBinaryRestartFileEvery	20000
+WriteBinaryRestartFileEvery	50000
 
 Movies				no
 WriteMoviesEvery		5000
@@ -15,7 +15,7 @@ Forcefield			CurrentFolder
 Framework			0
 FrameworkName			GRAP
 UnitCells			1 1 1
-HeliumVoidFraction		1.00
+HeliumVoidFraction		0.972263
 ExternalTemperature		&0
 ExternalPressure		&1
 InputFileType			cssr
