@@ -12,6 +12,7 @@ derivative-step 0.01
 damping-factor 2
 max-steps 10
 tolerance 0.001
+rescale log
 use-cores 4
 save-fx
 save-log

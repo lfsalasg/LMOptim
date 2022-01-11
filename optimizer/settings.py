@@ -22,6 +22,7 @@ def initialize():
     global tolerance
     global cores
     global set_dim
+    global rescale
     global save
 
     jobName     = 'Optimization'
@@ -31,6 +32,7 @@ def initialize():
     tolerance   = 0.01
     cores       = 1
     set_dim     = 1
+    rescale     = 'lineal'
     save        = {
         "jacobian": False,
         "fx": False,

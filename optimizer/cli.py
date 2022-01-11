@@ -19,14 +19,24 @@ def parse_cli ():
     
     parser.add_argument(
         '--test',
-        help='Version of the optimizer',
-        action='store_true',
+        help='Run the test file',
+        action='store_true'
+    ) #Comment for production
+
+    parser.add_argument(
+        '-o',
+        help='Name of the output file(s)',
+        default='output'
     )
 
     cli = parser.parse_args()
 
     if cli.version:
         print(f"{__app_name__} v {__version__}")
+        exit()
+
+    if cli.test:
+        import optimizer.test
         exit()
 
     return cli

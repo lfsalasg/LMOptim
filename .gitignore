@@ -134,3 +134,4 @@ optimizer/tmp/*
 *.input
 !template.input
 *.out
+optimizer/test.py

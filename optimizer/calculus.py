@@ -1,4 +1,5 @@
 import numpy as np
+import math
 import optimizer.interfaces.RASPA.launch as launcher
 from numpy import matrix as mat
 
@@ -51,3 +52,26 @@ def jacobian2(params,states,delta):
             J[j,i] = (float(d_fn_up[j]) - float(d_fn_down[j]))/delta    
     
     return J
+
+def rescale(values,type):
+    if type == 'lineal':
+        return values
+    if type == 'ln':
+        #Truncates to zero if negative is found
+        out = values
+        for i in range(0,len(values)):
+            if values[i] <= 0:
+                out[i] = 0.0
+            else:
+                out[i] = math.log(values[i])
+        return out
+    
+    if type == 'log':
+        #Truncates to zero if negative is found
+        out = values
+        for i in range(0,len(values)):
+            if values[i] <= 0:
+                out[i] = 0
+            else:
+                out[i] = math.log(values[i],10)
+        return out

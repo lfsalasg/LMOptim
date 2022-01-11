@@ -12,7 +12,7 @@ import optimizer.utilities as ut
 import optimizer.callables as cll
 import optimizer.interfaces.RASPA.launch as launcher
 
-def main(inf):
+def main(inf,out):
     # Initialize parameters
     st.initialize()
     states      = list()
@@ -75,11 +75,11 @@ def main(inf):
             except ValueError as e:
                 print("Fatal error: ",e)
 
-    log = ut.Logger("try3.log",True)
+    log = ut.Logger(out+".log",True)
     if st.save["jacobian"]:
-        logJ = ut.Logger("try3_J.log",True)
+        logJ = ut.Logger(out+"_J.log",True)
     if st.save["fx"]:
-        logF = ut.Logger("try3_F.log",True)
+        logF = ut.Logger(out+"_F.log",True)
 
     #Initialize the fx vector
     fx = mat (np.zeros ((len(states), 1))) # f (x) 100 * 1 error
@@ -106,6 +106,8 @@ def main(inf):
  
         estimates = launcher.read_results(st.jobName,step,len(states),"A")
         estimates = [float(i) for i in estimates]
+        estimates = calc.rescale(estimates,st.rescale)
+        y         = calc.rescale(y,st.rescale)
  
         launcher.clean_tmp(st.jobName,step)
 
