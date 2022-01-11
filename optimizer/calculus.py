@@ -1,5 +1,4 @@
 import numpy as np
-import pandas as pd
 import optimizer.interfaces.RASPA.launch as launcher
 from numpy import matrix as mat
 
